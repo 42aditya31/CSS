@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0ead6, #c8a2c8); 
+    color: #333;
+}
+
+.main-header {
+    text-align: center;
+    background: linear-gradient(to right, #c8a2c8, #f0ead6); 
+    color: #333; 
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
+    text-indent: 30px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #333; 
+}
