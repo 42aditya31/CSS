@@ -1,0 +1,35 @@
+/* Global Style (Low Specificity) */
+/* Applies to all elements of the specified type */
+
+*{
+    background-color: #4d5d53;
+}
+p {
+    color: #4d5d53; /* Default color for all <p> elements */
+    font-size: 16px; /* Sets the base font size */
+}
+
+/* Class Selector (Higher Specificity) */
+/* Targets elements with the class "highlight" */
+.highlight {
+    color: #d0f0c0; /* Overrides the global <p> color */
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* ID Selector (Even Higher Specificity) */
+/* Targets the element with the id "main-title" */
+#main-title {
+    color: #4d5d53; /* Overrides any conflicting styles */
+    text-transform: uppercase; /* Makes the title uppercase */
+}
+
+/* Important Rule (Overrides Everything) */
+#main-title {
+    color: #d0f0c0 !important; /* Overrides all conflicting rules */
+}
+
+/* Cascading Rule Example */
+/* If two selectors have the same specificity, the later one in the CSS file takes precedence */
+.container p {
+    color: #d0f0c0; /* Overrides earlier <p> color because it's declared later */
+}
