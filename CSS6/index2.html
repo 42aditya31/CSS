@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        /* Root settings for rem units */
+        :root {
+            font-size: 16px; /* 1rem = 16px */
+        }
+
+        /* Page background */
+        body {
+            margin: 0;
+            background-color: #fae3da; /* Light theme color */
+            color: #8c92ac; /* Text color */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Pixel (px) example */
+        .box-px {
+            width: 200px; /* Fixed size */
+            height: 100px;
+            background-color: #8c92ac;
+            color: #fae3da;
+            text-align: center;
+            line-height: 100px; /* Match height for vertical alignment */
+            margin-bottom: 20px;
+        }
+
+        /* REM example */
+        .box-rem {
+            width: 20rem; /* Relative to the root font size */
+            height: 5rem;
+            background-color: #fae3da;
+            color: #8c92ac;
+            text-align: center;
+            line-height: 5rem;
+            border: 2px solid #8c92ac;
+            margin-bottom: 20px;
+        }
+
+        /* EM example */
+        .box-em {
+            width: 10em; /* Relative to the parent font size */
+            height: 5em;
+            background-color: #8c92ac;
+            color: #fae3da;
+            text-align: center;
+            line-height: 5em;
+            margin-bottom: 20px;
+        }
+
+        /* Percentage (%) example */
+        .box-percent {
+            width: 50%; /* 50% of the parent container */
+            height: 100px;
+            background-color: #fae3da;
+            color: #8c92ac;
+            text-align: center;
+            line-height: 100px;
+            border: 2px dashed #8c92ac;
+            margin-bottom: 20px;
+        }
+
+        /* Viewport height (vh) and width (vw) example */
+        .box-vh-vw {
+            width: 50vw; /* 50% of the viewport width */
+            height: 20vh; /* 20% of the viewport height */
+            background-color: #8c92ac;
+            color: #fae3da;
+            text-align: center;
+            line-height: 20vh; /* Match height for vertical alignment */
+        }
+
+        /* Additional styling for headings */
+        h1, h2 {
+            text-align: center;
+            color: #8c92ac;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Sizing Units</h1>
+    <h2>Examples of px, rem, em, %, vh, and vw</h2>
+
+    <div class="box-px">200px</div>
+    <div class="box-rem">20rem</div>
+    <div class="box-em">10em</div>
+    <div class="box-percent">50%</div>
+    <div class="box-vh-vw">50vw x 20vh</div>
+</body>
+</html>
