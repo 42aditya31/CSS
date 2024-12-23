@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop Layout</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    .header {
+      position: fixed; /* Fixed header for always-visible navigation */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    }
+
+    .banner {
+      position: relative; /* Relative positioning for overlay text */
+      background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner h1 {
+      position: absolute; /* Positioned within the banner */
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      font-size: 3rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      padding: 50px 20px;
+    }
+
+    .menu-item {
+      position: relative; /* For absolute child elements */
+      background: #f8f4f0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      flex: 1;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item img {
+      width: 100%;
+      filter: invert(10%); /* Slightly adjust image colors */
+    }
+
+    .menu-item .price {
+      position: absolute; /* Positioned over the image */
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .special {
+      position: sticky; /* Sticky special item card */
+      top: 10px;
+      background: #fff9e6;
+      padding: 10px;
+      border: 2px solid #d4a373;
+    }
+
+    .footer {
+      position: fixed; /* Fixed footer for contact info */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .animation-box {
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
+      background: #87ceeb;
+      transform: rotate(20deg) translate(50px, 20px);
+      perspective: 500px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .animation-box:hover {
+      transform: rotate(360deg) translate(0, 0); /* Adds a spinning animation on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h2>Coffee House</h2>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Welcome to the Best Coffee in Town</h1>
+  </div>
+
+  <!-- Menu Section -->
+  <div class="menu">
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Coffee">
+      <div class="price">$5</div>
+      <h3>Classic Coffee</h3>
+      <p>Enjoy the aroma of freshly brewed coffee with every sip.</p>
+    </div>
+
+    <div class="menu-item special">
+      <h3>Special Offer!</h3>
+      <p>Buy 1 Get 1 Free on Cappuccino.</p>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1574169208507-843761648e36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Latte">
+      <div class="price">$6</div>
+      <h3>Latte</h3>
+      <p>A perfect blend of espresso, steamed milk, and foam.</p>
+    </div>
+  </div>
+
+  <!-- Transform Example -->
+  <div class="animation-box"></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Contact us: coffeehouse@example.com</p>
+  </div>
+</body>
+</html>
