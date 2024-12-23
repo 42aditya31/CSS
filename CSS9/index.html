@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling Lists with CSS</title>
+  <style>
+
+    .container {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+
+    .default-list {
+      list-style-type: disc; /* Default bullet style */
+      margin-left: 20px; /* Adds space from the left edge */
+    }
+
+
+    .custom-type-list {
+      list-style-type: square; /* Uses square bullets */
+      margin-left: 20px;
+
+   
+    }
+
+
+    .position-inside-list {
+      list-style-type: circle; /* Circle bullets */
+      list-style-position: inside; /* Bullets are inside the content box */
+      margin-left: 0; /* Align with parent */
+      background-color: aquamarine;
+    }
+
+
+    .position-outside-list {
+      list-style-type: decimal; /* Numbered list */
+      list-style-position: outside; /* Bullets are outside the content box */
+      margin-left: 20px;
+      background-color: azure;
+    }
+
+
+    .custom-image-list {
+      list-style-image: url('https://via.placeholder.com/15'); /* Placeholder for custom bullet */
+      margin-left: 20px;
+    }
+
+
+    .no-style-list {
+      list-style: none; /* Removes bullets entirely */
+      padding: 0; /* Removes default padding */
+      margin: 0; /* Removes default margin */
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h3>Default List Style</h3>
+    <ul class="default-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h3>Custom List Style Type</h3>
+    <ul class="custom-type-list">
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h3>List Style Position: Inside</h3>
+    <ul class="position-inside-list">
+      <li>Content 1</li>
+      <li>Content 2</li>
+      <li>Content 3</li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h3>List Style Position: Outside</h3>
+    <ul class="position-outside-list">
+      <li>Point X</li>
+      <li>Point Y</li>
+      <li>Point Z</li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h3>List with Custom Image</h3>
+    <ul class="custom-image-list">
+      <li>Task 1</li>
+      <li>Task 2</li>
+      <li>Task 3</li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h3>List with No Style</h3>
+    <ul class="no-style-list">
+      <li>Plain Item 1</li>
+      <li>Plain Item 2</li>
+      <li>Plain Item 3</li>
+    </ul>
+  </div>
+
+</body>
+</html>
