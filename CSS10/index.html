@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Overflow Property</title>
+    <style>
+      .container {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .overflow-auto {
+        width: 200px;
+        height: 100px;
+        overflow: auto; /* Scrolls only when content overflows */
+        border: 1px solid blue;
+        background-color: #f0f8ff;
+      }
+
+      .overflow-hidden {
+        width: 200px;
+        height: 100px;
+        overflow: hidden; /* Content outside the box is hidden */
+        border: 1px solid green;
+        background-color: #f0fff0;
+      }
+
+      .overflow-scroll {
+        width: 200px;
+        height: 100px;
+        overflow: scroll; /* Always shows scrollbars */
+        border: 1px solid red;
+        background-color: #fff0f0;
+      }
+
+      .text-ellipsis {
+        width: 200px;
+        white-space: nowrap; /* Prevents wrapping */
+        overflow: hidden; /* Hides overflowed text */
+        text-overflow: ellipsis; /* Adds '...' to indicate overflow */
+        border: 1px solid purple;
+        padding: 5px;
+      }
+
+      .white-space-normal {
+        width: 200px;
+        white-space: normal; /* Allows wrapping */
+        overflow: hidden;
+        border: 1px solid orange;
+        padding: 5px;
+      }
+
+      .white-space-nowrap {
+        width: 200px;
+        white-space: nowrap; /* Prevents wrapping */
+        overflow: hidden; /* Hides overflowed text */
+        border: 1px solid brown;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Overflow: Auto</h3>
+      <div class="overflow-auto">
+        This is an example of overflow:auto. Content will scroll if it exceeds
+        the height or width of the container.
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Overflow: Hidden</h3>
+      <div class="overflow-hidden">
+        This is an example of overflow:hidden. Any content outside the container
+        is hidden and cannot be accessed.
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Overflow: Scroll</h3>
+      <div class="overflow-scroll">
+        This is an example of overflow:scroll. Scrollbars will always appear
+        even if the content does not overflow.
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Text Overflow: Ellipsis</h3>
+      <div class="text-ellipsis">
+        This is an example of text-overflow:ellipsis. The content will be
+        truncated with "..." if it overflows the container width.
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>White Space: Normal</h3>
+      <div class="white-space-normal">
+        This is an example of white-space:normal. Content will wrap normally
+        based on the container width.
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>White Space: No Wrap</h3>
+      <div class="white-space-nowrap">
+        This is an example of white-space:nowrap. Content will not wrap and will
+        overflow or truncate depending on overflow settings.
+      </div>
+    </div>
+  </body>
+</html>
