@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Property</title>
+  <style>
+
+    .container {
+      border: 1px solid black; /* Add a border to see dimensions */
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+
+    .inline-example span {
+      display: inline; /* Default display for span */
+      border: 1px solid blue; /* Border to show width */
+      padding: 5px;
+      margin: 5px;
+    }
+
+
+    .inline-block-example span {
+      display: inline-block; /* Allows width/height settings */
+      border: 1px solid green;
+      padding: 5px;
+      margin: 5px;
+      width: 100px; /* Now width is respected */
+      text-align: center; /* Centers text within inline-block */
+    }
+
+
+    .block-example span {
+      display: block; /* Forces each element to take full width */
+      border: 1px solid orange;
+      padding: 10px;
+      margin: 5px;
+    }
+
+
+    .hidden-example .hidden {
+      display: none; /* Element won't render in layout */
+    }
+
+
+    .visibility-example .invisible {
+      visibility: hidden; /* Element occupies space but is invisible */
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container inline-example">
+    <!-- Inline elements don't respect width or height -->
+    <h3>Display: Inline</h3>
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+  </div>
+
+
+  <div class="container inline-block-example">
+    <!-- Inline-block elements respect width and height but still flow inline -->
+    <h3>Display: Inline-block</h3>
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+  </div>
+
+ 
+  <div class="container block-example">
+    <!-- Block elements take up the full width by default -->
+    <h3>Display: Block</h3>
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+  </div>
+
+
+  <div class="container hidden-example">
+    <!-- Display: none completely removes the element -->
+    <h3>Display: None</h3>
+    <span>Visible Item</span>
+    <span class="hidden">Hidden Item</span>
+    <span>Visible Item</span>
+  </div>
+
+
+  <div class="container visibility-example">
+    <!-- Visibility: hidden makes the element invisible but reserves its space -->
+    <h3>Visibility: Hidden</h3>
+    <span>Visible Item</span>
+    <span class="invisible">Invisible Item</span>
+    <span>Visible Item</span>
+  </div>
+
+</body>
+</html>

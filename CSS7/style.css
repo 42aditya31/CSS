@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box1{
+    border: 2px solid black;
+    display: inline;   /* When we create an inline element we can not change its width  */
+    width: 332px;
+    padding: 45px;
+    margin: 90px;
+    /* display: none; It will remove the box and space both */
+    /* visibility: none; it will remove box but not remove the space  */
+}
+
+.box2{
+    border: 2px solid black;
+    width: 332px;
+    padding: 45px;
+    margin: 90px;
+    display: inline-block;   /* When we change it to  inline-block  element then  we can  change its width  */
+    
+}
