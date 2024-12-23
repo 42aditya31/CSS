@@ -1,0 +1,82 @@
+
+.container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Position Relative */
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background-color: #f0f8ff;
+  padding: 10px;
+  border: 2px solid blue;
+}
+
+/* Position Absolute */
+.absolute-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffe4e1;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+/* Position Fixed */
+.fixed-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d3ffd3;
+  padding: 10px;
+  border: 2px solid green;
+}
+
+/* Position Sticky */
+.sticky-box {
+  position: sticky;
+  top: 0;
+  background-color: #ffffe0;
+  padding: 10px;
+  border: 2px solid orange;
+}
+
+/* Transform Translate */
+.transform-translate {
+  position: relative;
+  background-color: #e6e6fa;
+  padding: 20px;
+  transform: translate(50px, 20px); /* Moves element 50px right and 20px down */
+  border: 2px solid purple;
+}
+
+/* Filter Invert */
+.filter-invert {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  filter: invert(100%); /* Inverts colors */
+  border: 2px solid #fff;
+}
+
+/* Perspective */
+.perspective-container {
+  perspective: 500px; /* Applies a 3D perspective */
+  position: relative;
+  height: 200px;
+}
+
+.perspective-box {
+  width: 100px;
+  height: 100px;
+  background-color: #87cefa;
+  transform: rotateY(45deg); /* Rotates element in 3D */
+  border: 2px solid navy;
+}
