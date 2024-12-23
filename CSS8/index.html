@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Shadows and Outlines</title>
+  <style>
+
+    .container {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+
+    .box-shadow-example {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Horizontal, Vertical, Blur, Color */
+      margin: 0 auto;
+      text-align: center;
+      line-height: 100px;
+    }
+
+
+    .text-shadow-example {
+      font-size: 24px;
+      font-weight: bold;
+      color: darkblue;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Horizontal, Vertical, Blur, Color */
+    }
+
+
+    .border-example {
+      border: 2px solid green; /* Solid border with color */
+      padding: 15px;
+    }
+
+
+    .outline-example {
+      outline: 3px dashed red; /* Outline outside the border */
+      padding: 15px;
+    }
+
+
+    .outline-offset-example {
+      outline: 3px solid blue; /* Solid outline */
+      outline-offset: 10px; /* Offset between the outline and the element */
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h3>Box Shadow</h3>
+    <div class="box-shadow-example">Shadowed Box</div>
+    <!-- Box has a shadow around it with specified blur and spread -->
+  </div>
+
+
+  <div class="container">
+    <h3>Text Shadow</h3>
+    <p class="text-shadow-example">This text has a shadow.</p>
+    <!-- Text appears with a subtle shadow effect -->
+  </div>
+
+
+  <div class="container">
+    <h3>Border</h3>
+    <div class="border-example">This box has a border.</div>
+    <!-- Border defines a visible boundary around the content -->
+  </div>
+
+
+  <div class="container">
+    <h3>Outline</h3>
+    <div class="outline-example">This box has an outline.</div>
+    <!-- Outline appears outside the border -->
+  </div>
+
+
+  <div class="container">
+    <h3>Outline with Offset</h3>
+    <div class="outline-offset-example">This box has an outline with offset.</div>
+    <!-- Outline is separated from the border with an offset -->
+  </div>
+
+</body>
+</html>
