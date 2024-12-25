@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Media Queries Example</title>
+  <style>
+    /* Default styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #000;
+    }
+    p{
+      margin: auto;
+        padding: auto;
+    }
+
+    /* Media Query: Minimum width */
+    @media (min-width: 600px) {
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+      }
+    }
+
+    /* Media Query: Maximum width */
+    @media (max-width: 400px) {
+      .box {
+        width: 80px;
+        height: 80px;
+        background-color: lightcoral;
+        border: 2px dashed red;
+      }
+    }
+
+    /* Media Query: Orientation (landscape) */
+    @media (orientation: landscape) {
+      .box {
+        background-color: lightyellow;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Media Queries Example</h1>
+  <p>Resize the browser or change the orientation to see the effect of media queries.</p>
+  <div class="box">Box</div>
+</body>
+</html>

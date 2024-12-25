@@ -1,0 +1,24 @@
+.container{
+    background-color: #003049;
+    color: white;
+    display: flex;
+}
+.boxes{
+    display: flex;
+}
+
+.box{
+    padding: auto;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    background-color: #b8b8ff;
+}
+
+@media (max-width: 520px){
+    .boxes{
+        flex-direction: column;
+    }
+    
+}
