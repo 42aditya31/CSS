@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Float & Clear Example</title>
+  <style>
+    /* Theme Colors */
+    :root {
+      --bg-color: #6d6875;
+      --text-color: #f4f4f4;
+      --box-bg-color: #6b705c;
+    }
+
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden; /* Clears floats inside the container */
+    }
+
+    .box {
+      background-color: var(--box-bg-color);
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    /* Float Example */
+    .image {
+      float: left;
+      margin-right: 15px;
+      width: 150px;
+    }
+
+    .text {
+      overflow: hidden; /* Ensures content flows properly next to the floated element */
+    }
+
+    /* Clear Example */
+    .clearfix {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Float & Clear Example</h1>
+
+  <div class="container">
+    <!-- Floated Image and Text -->
+    <div class="box">
+      <img src="https://via.placeholder.com/150" alt="Placeholder Image" class="image">
+      <p class="text">
+        This is an example of a floated image with text wrapped around it. The image is floated to the left, 
+        and the text flows naturally around the image. The float property helps achieve this type of layout, 
+        commonly used in blog posts or articles.
+      </p>
+    </div>
+
+    <!-- Another Box Without Float -->
+    <div class="box clearfix">
+      <p>
+        Here, the <code>clear</code> property is used to ensure that the layout below the floated element 
+        doesn't wrap around it. This is important to maintain a clean and organized structure for subsequent elements.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
