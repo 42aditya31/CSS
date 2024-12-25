@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website with CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Grid Container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr; /* Default layout for mobile */
+      grid-template-areas:
+        "header"
+        "nav"
+        "showcase"
+        "services"
+        "portfolio"
+        "footer";
+      gap: 20px;
+    }
+
+    /* Header */
+    header {
+      grid-area: header;
+      background-color: #6d6875;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Navigation */
+    nav {
+      grid-area: nav;
+      background-color: #5c677d;
+      padding: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Showcase */
+    .showcase {
+      grid-area: showcase;
+      background-color: #cbc0d3;
+      color: black;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Services */
+    .services {
+      grid-area: services;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .services .service {
+      background-color: #22333b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Portfolio */
+    .portfolio {
+      grid-area: portfolio;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .portfolio .item {
+      background-color: #5c677d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      grid-area: footer;
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "showcase showcase"
+          "services portfolio"
+          "footer footer";
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my professional portfolio</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="showcase">
+    <h2>Showcase</h2>
+    <p>This is the showcase section to highlight your work or introduction.</p>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <h3>Web Development</h3>
+      <p>Building responsive and modern websites.</p>
+    </div>
+    <div class="service">
+      <h3>Graphic Design</h3>
+      <p>Creating beautiful and functional designs.</p>
+    </div>
+    <div class="service">
+      <h3>SEO Optimization</h3>
+      <p>Improving your site's ranking on search engines.</p>
+    </div>
+  </div>
+
+  <div class="portfolio">
+    <div class="item">
+      <h3>Project 1</h3>
+      <p>Brief description of the project.</p>
+    </div>
+    <div class="item">
+      <h3>Project 2</h3>
+      <p>Brief description of the project.</p>
+    </div>
+    <div class="item">
+      <h3>Project 3</h3>
+      <p>Brief description of the project.</p>
+    </div>
+    <div class="item">
+      <h3>Project 4</h3>
+      <p>Brief description of the project.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+  </footer>
+</div>
+
+</body>
+</html>

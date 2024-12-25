@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Why CSS Grid? */
+    /* CSS Grid makes it easy to create complex, responsive layouts with precise control over rows and columns. */
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 1fr; /* Sidebar 200px, Main area takes remaining space */
+      grid-template-rows: auto 1fr auto; /* Header auto height, content fills space, footer auto height */
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer"; /* Assigning areas for easier layout */
+      height: 100vh;
+      gap: 10px; /* Gap between grid items */
+    }
+
+    header {
+      grid-area: header;
+      background-color: #5c677d;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #22333b;
+      color: white;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #cbc0d3;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      grid-template-rows: repeat(2, 200px); /* 2 rows of 200px height */
+      gap: 20px;
+      justify-items: center; /* Align items horizontally */
+      align-items: center; /* Align items vertically */
+    }
+
+    .main div {
+      background-color: #5c677d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Grid Item Properties */
+    .main div:nth-child(1) {
+      grid-column: span 2; /* Span across 2 columns */
+    }
+
+    .main div:nth-child(2) {
+      grid-row: span 2; /* Span across 2 rows */
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <header>Header</header>
+  <div class="sidebar">Sidebar Content</div>
+  <div class="main">
+    <div>Item 1 (span 2 cols)</div>
+    <div>Item 2 (span 2 rows)</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+  <footer>Footer</footer>
+</div>
+
+</body>
+</html>
