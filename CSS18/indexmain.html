@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sticky Navbar with Scroll</title>
+  <style>
+    /* Reset and Body Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #6b705c;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li {
+      cursor: pointer;
+    }
+
+    /* Fixed Logo */
+    .logo {
+      position: fixed;
+      top: 82vh;
+      left: 1070px;
+      width: 80px;
+      z-index: 2000;
+    }
+
+    /* Main Content */
+    .content {
+      padding: 20px;
+    }
+
+    .section {
+      height: 100vh; /* Make each section as tall as the viewport */
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #6b705c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <div class="navbar">
+    <h1>My Website</h1>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- Fixed Logo -->
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-r5sRVfNqDENilfta1dEAvBih6B0sUaDwcg&s"
+    alt="Logo"
+    class="logo"
+  />
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="section">
+      <h2>Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a arcu
+        facilisis, gravida ligula id, ullamcorper sapien. Pellentesque habitant
+        morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Section 2</h2>
+      <p>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia curae; Fusce sit amet nulla lorem. Nullam scelerisque
+        justo nec elit vestibulum, vel pharetra erat faucibus.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Section 3</h2>
+      <p>
+        Aliquam erat volutpat. Integer vehicula risus vel orci feugiat, quis
+        eleifend arcu hendrerit. Nam fringilla sodales metus nec ultricies.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Section 4</h2>
+      <p>
+        Proin auctor risus nec libero feugiat, ut dictum elit vulputate. Nulla
+        eu velit vestibulum, tincidunt felis eget, mollis nunc.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2024 My Website. All rights reserved.</p>
+  </div>
+</body>
+</html>

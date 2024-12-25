@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Layout</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #cbc0d3;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #5c677d;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar ul li {
+      color: white;
+      margin: 8px 30px;
+    }
+
+    .main {
+      display: flex;
+      gap: 20px;
+      margin: 80px;
+    }
+
+    .box1, .box2 {
+      height: 60vh;
+      width: 400px;
+      background-color: #22333b;
+    }
+
+    .logo {
+      position: fixed;
+      top: 80vh;
+      left: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+    <div>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-r5sRVfNqDENilfta1dEAvBih6B0sUaDwcg&s"
+        alt="logo" class="logo" />
+    </div>
+  </div>
+</body>
+</html>

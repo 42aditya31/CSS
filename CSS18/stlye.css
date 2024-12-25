@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #cbc0d3;
+ 
+}
+.container{
+    position: relative;
+}
+.navbar{
+    position: sticky;
+}
+.navbar ul{
+    display: flex;
+    background-color: #5c677d;
+    position: sticky;
+}
+
+.navbar ul li{
+    color: white;
+  margin: 8px 30px;
+  background-color: #5c677d;
+}
+
+.main{
+    display: flex;
+}
+.box1{
+    height: 60vh;
+    width: 400px;
+    background-color: #22333b;
+    margin: 80px 100px;
+}
+
+.box2{
+    height: 60vh;
+    width: 400px;
+    background-color: #22333b;
+    margin: 80px 100px;
+}
+.logo{
+    position: fixed;
+}
