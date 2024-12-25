@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Example</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Attribute Selector */
+    a[target="_blank"] {
+      color: #6b705c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a[target="_blank"]:hover {
+      text-decoration: underline;
+      color: #6d6875;
+    }
+
+    /* nth-child Selector */
+    ul li:nth-child(odd) {
+      background-color: #ddd;
+    }
+
+    ul li:nth-child(even) {
+      background-color: #bbb;
+      color: #fff;
+    }
+
+    /* ::before and ::after Pseudo-elements */
+    .heading::before {
+      content: "🔥 ";
+      color: red;
+    }
+
+    .heading::after {
+      content: " 🌟";
+      color: gold;
+    }
+
+    /* ::selection Pseudo-element */
+    ::selection {
+      background-color: #6b705c;
+      color: white;
+    }
+
+    /* ::placeholder Pseudo-element */
+    input::placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
+
+    input:focus::placeholder {
+      color: #6b705c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors Example</h1>
+
+  <!-- Attribute Selector -->
+  <p>
+    Visit <a href="https://example.com" target="_blank">Example</a> or 
+    <a href="https://another-example.com" target="_self">Another Example</a>.
+  </p>
+
+  <!-- nth-child Selector -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- ::before and ::after -->
+  <h2 class="heading">Styled Heading</h2>
+
+  <!-- ::selection -->
+  <p>Highlight this text to see the <strong>selection</strong> effect.</p>
+
+  <!-- ::placeholder -->
+  <input type="text" placeholder="Enter your name" />
+</body>
+</html>
