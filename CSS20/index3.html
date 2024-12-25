@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Navbar</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar Container */
+    .navbar {
+      display: flex;
+      justify-content: space-between; /* Space between items */
+      align-items: center; /* Align items vertically */
+      background-color: #333; /* Dark background */
+      color: white;
+      padding: 10px 20px;
+    }
+
+    /* Logo */
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Navigation Links */
+    .navbar ul {
+      display: flex;
+      list-style: none; /* Remove bullets */
+    }
+
+    .navbar ul li {
+      margin: 0 15px; /* Spacing between links */
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none; /* Remove underline */
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #f39c12; /* Change color on hover */
+    }
+
+    /* Right Section (e.g., Search, Buttons) */
+    .navbar .right-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .right-section button {
+      background-color: #f39c12;
+      border: none;
+      padding: 8px 12px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-left: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .right-section button:hover {
+      background-color: #d35400;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        display: none; /* Initially hide menu */
+      }
+
+      .navbar ul.active {
+        display: flex; /* Show menu when active */
+      }
+
+      .navbar .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .menu-toggle {
+      display: none; /* Hidden on larger screens */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">MyWebsite</div>
+
+  <!-- Navigation Links -->
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Right Section (e.g., buttons) -->
+  <div class="right-section">
+    <button>Login</button>
+  </div>
+
+  <!-- Menu Toggle for Mobile -->
+  <div class="menu-toggle">&#9776;</div>
+</div>
+
+<!-- Dummy Content -->
+<div style="padding: 20px;">
+  <h1>Welcome to MyWebsite</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultrices leo, id gravida metus. 
+    Curabitur auctor sit amet lacus eu egestas. Sed vel risus ac enim bibendum vehicula. 
+    Pellentesque vitae eros eget odio feugiat sodales.
+  </p>
+</div>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.navbar ul');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
