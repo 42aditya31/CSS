@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Example</title>
+  <style>
+    /* Global CSS Variables */
+    :root {
+      --main-bg-color: #f0f8ff;
+      --main-text-color: #333;
+      --button-bg-color: #008cba;
+      --button-text-color: white;
+    }
+
+    /* Styling using Global Variables */
+    body {
+      background-color: var(--main-bg-color);
+      color: var(--main-text-color);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--main-text-color);
+    }
+
+    .button {
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Local Variable Example */
+    .special-section {
+      --section-bg-color: #ffebcd;
+      --section-text-color: #00008b;
+      background-color: var(--section-bg-color);
+      color: var(--section-text-color);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    /* What happens if a variable is not declared */
+    .undefined-variable-example {
+      background-color: var(--non-existent-color, #ffcccc); /* Fallback color applied */
+      color: var(--non-existent-text-color, black); /* Fallback color applied */
+      padding: 10px;
+      border: 1px dashed red;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Variables Example</h1>
+
+  <p>This example demonstrates the use of CSS variables. Below are sections with different styles.</p>
+
+  <button class="button">Global Variable Button</button>
+
+  <div class="special-section">
+    <p>This section uses local variables for its background and text color.</p>
+  </div>
+
+  <div class="undefined-variable-example">
+    <p>This section uses a variable that is not declared, so fallback values are applied.</p>
+  </div>
+</body>
+</html>

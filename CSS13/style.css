@@ -1,0 +1,24 @@
+:root{
+    --color: #fdeea0;
+    -seccolor : #deaade;
+
+}
+
+ul{
+    background-color: var(--seccolor);
+    display: flex;
+    /* padding:30px; */
+    margin-right: 20px
+}
+div :first-child{
+    background-color: aqua;
+}
+ul li{
+
+    list-style: none;
+    padding: 30px;
+    color: var(--color);
+}
+div{
+    background-color: var(--seccolor);
+}
