@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .main-content {
+      flex: 2 1 60%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+      flex: 1 1 30%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content, .sidebar {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Blog</h1>
+</header>
+
+<nav class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+  <section class="main-content">
+    <h2>Blog Post Title</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. 
+      Proin sit amet felis nec velit laoreet euismod. Vivamus auctor vehicula nisi nec tristique.
+    </p>
+    <p>
+      Nullam gravida purus non nulla scelerisque, in vulputate eros scelerisque. 
+      Integer volutpat, ligula eget tincidunt convallis, neque metus suscipit lectus, at pellentesque erat arcu a odio.
+    </p>
+  </section>
+
+  <aside class="sidebar">
+    <h3>Sidebar</h3>
+    <p>
+      This is the sidebar content. You can add recent posts, categories, or any other widgets here.
+    </p>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2024 My Blog | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
