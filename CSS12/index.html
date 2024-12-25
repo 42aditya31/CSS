@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Card with CSS Expertise</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    /* Card Container */
+    .card {
+      width: 350px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px); /* Adds hover lift effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+ 
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain; /* Ensures the image fits without distortion */
+    }
+
+
+    .card-content {
+      padding: 15px;
+      position: relative;
+    }
+
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Cuts off long titles */
+    }
+
+
+    .card-content p {
+      margin: 10px 0;
+      font-size: 0.9rem;
+      color: #666;
+      height: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; /* Ensures single-line overflow */
+    }
+
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #f8f8f8;
+      border-top: 1px solid #ddd;
+      position: sticky; /* Sticks footer to the bottom */
+      bottom: 0;
+    }
+
+    .card-footer span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card-footer button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 15px;
+      cursor: pointer;
+      outline-offset: 4px; /* Adds spacing between focus outline and button */
+      transition: background 0.3s ease;
+    }
+
+    .card-footer button:hover {
+      background: #0056b3;
+    }
+
+   
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .card:hover {
+      transform: perspective(1000px) rotateY(5deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+   
+    <div class="badge">Sale</div>
+
+    <!-- Product Image -->
+    <img src="https://i.pinimg.com/236x/a4/7d/c2/a47dc297e848b4c9bcbc2a7a9e0bfe0a.jpg" alt="Product Image">
+
+    <!-- Content Section -->
+    <div class="card-content">
+      <h3>Awesome Product Title That Might Be Too Long</h3>
+      <p>This is a sample product description to demonstrate overflow handling in CSS. It's a great way to ensure UI consistency.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="card-footer">
+      <span>$29.99</span>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</body>
+</html>
