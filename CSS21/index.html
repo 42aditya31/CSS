@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transforms </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #6b705c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+    }
+
+    /* Individual Transform Examples */
+    .rotate:hover {
+      transform: rotate(45deg); /* Rotate by 45 degrees */
+    }
+
+    .scale:hover {
+      transform: scale(1.5); /* Enlarge by 1.5x */
+    }
+
+    .skew:hover {
+      transform: skew(20deg, 10deg); /* Skew horizontally and vertically */
+    }
+
+    .translate:hover {
+      transform: translate(50px, 20px); /* Move 50px right and 20px down */
+    }
+
+    /* Multiple Transforms */
+    .multiple:hover {
+      transform: rotate(30deg) scale(1.2) translate(20px, 20px); /* Rotate, scale, and translate */
+    }
+
+    /* Transform Origin */
+    .origin:hover {
+      transform: rotate(360deg);
+      transform-origin: top left; /* Rotate from top-left corner */
+    }
+
+    /* Real-Life Button Example */
+    .button:hover {
+      transform: scale(1.1) translateY(-5px); /* Slight zoom and lift */
+      background-color: #ff5733; /* Change background color */
+    }
+
+    /* Skewed Card Example */
+    .skewed-card {
+      width: 300px;
+      height: 180px;
+      background-color: #22333b;
+      color: white;
+      transform: skewY(-10deg); /* Skewed card design */
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    .skewed-card p {
+      transform: skewY(10deg); /* Neutralize skew for text readability */
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>CSS Transforms </h1>
+<p style="text-align: center;">Hover over each box to see transform effects!</p>
+
+<div class="container">
+  <!-- Transform Examples -->
+  <div class="box rotate">Rotate</div>
+  <div class="box scale">Scale</div>
+  <div class="box skew">Skew</div>
+  <div class="box translate">Translate</div>
+
+  <!-- Multiple Transformations -->
+  <div class="box multiple">Multiple</div>
+
+  <!-- Transform Origin -->
+  <div class="box origin">Origin</div>
+
+  <!-- Real-Life Button Example -->
+  <div class="box button">Button</div>
+</div>
+
+<!-- Skewed Card -->
+<div class="skewed-card">
+  <p>Skewed Card Example</p>
+</div>
+
+</body>
+</html>
