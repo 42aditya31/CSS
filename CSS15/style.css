@@ -1,0 +1,67 @@
+
+/* Global CSS Variables */
+:root {
+  --nav-bg-color: #222;
+  --link-color: white;
+  --link-hover-color: #ff6347;
+  --active-link-color: #00fa9a;
+  --section1-color: #ff9999;
+  --section2-color: #99ccff;
+  --section3-color: #ffe680;
+  --section4-color: #d1ff99;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--nav-bg-color);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--link-hover-color);
+}
+
+nav .active {
+  color: var(--active-link-color);
+}
+
+/* Section Styles */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+#section1 {
+  background-color: var(--section1-color);
+}
+
+#section2 {
+  background-color: var(--section2-color);
+}
+
+#section3 {
+  background-color: var(--section3-color);
+}
+
+#section4 {
+  background-color: var(--section4-color);
+}
