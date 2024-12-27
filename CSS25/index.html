@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Filters Example</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Different Filters */
+    .grayscale img {
+      filter: grayscale(100%);
+    }
+
+    .blur img {
+      filter: blur(5px);
+    }
+
+    .brightness img {
+      filter: brightness(150%);
+    }
+
+    .contrast img {
+      filter: contrast(200%);
+    }
+
+    .sepia img {
+      filter: sepia(100%);
+    }
+
+    .hue-rotate img {
+      filter: hue-rotate(90deg);
+    }
+
+    .invert img {
+      filter: invert(100%);
+    }
+
+    .saturate img {
+      filter: saturate(300%);
+    }
+
+    .drop-shadow img {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Filters Example</h1>
+  <div class="container">
+    <div class="box grayscale">
+        <!-- <h3>Gray scale</h3> -->
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Grayscale Filter">
+      <p>Grayscale</p>
+    </div>
+
+    <div class="box blur">
+        <h3></h3>
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Blur Filter">
+      <p>Blur</p>
+    </div>
+
+    <div class="box brightness">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Brightness Filter">
+      <p>Brightness</p>
+    </div>
+
+    <div class="box contrast">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Contrast Filter">
+      <p>Contrast</p>
+    </div>
+
+    <div class="box sepia">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Sepia Filter">
+      <p>Sepia</p>
+    </div>
+
+    <div class="box hue-rotate">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Hue Rotate Filter">
+      <p>Hue-Rotate</p>
+    </div>
+
+    <div class="box invert">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Invert Filter">
+      <p>Invert</p>
+    </div>
+
+    <div class="box saturate">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Saturate Filter">
+      <p>Saturate</p>
+    </div>
+
+    <div class="box drop-shadow">
+      <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Drop Shadow Filter">
+      <p>Drop Shadow</p>
+    </div>
+  </div>
+</body>
+</html>
