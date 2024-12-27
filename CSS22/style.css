@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #4E8098;
+}
+
+.contanier{
+    background-color: #e9edc9;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.box{
+    background-color: #ff758f;
+    height: 20vh;
+    width: 20vw;
+    border-radius: 30px;
+    transition: all 2s ease-in-out 1s;
+}
+
+.transalate{
+    transform: translateX(10%) translateY(10%) scale(2);
+
+}

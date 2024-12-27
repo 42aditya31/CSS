@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip the Cover</title>
+  <style>
+    :root {
+      --dark-blue: #2b2d42;
+      --gray-blue: #8d99ae;
+      --light-blue: #edf2f4;
+      --gold: #ffd700;
+      --red: #ef233c;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--dark-blue);
+      color: var(--light-blue);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .game-container {
+  display: grid;
+  grid-template-columns: repeat(6, 60px); /* Reduced card size to 60px */
+  grid-template-rows: repeat(6, 60px);   /* Reduced card size to 60px */
+  gap: 6px;                              /* Reduced gap between cards */
+  background-color: var(--gray-blue);
+  padding: 12px;                         /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  font-size: 0.8rem;                     /* Adjusted font size for smaller cards */
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+    .card.flipped {
+      background-color: var(--gold);
+      color: var(--dark-blue);
+      pointer-events: none;
+    }
+
+    .card.matched {
+      background-color: var(--red);
+      color: var(--light-blue);
+      pointer-events: none;
+    }
+
+    .score {
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--light-blue);
+      color: var(--dark-blue);
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: var(--gray-blue);
+      color: var(--light-blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <h1>Flip & Match: Find - Twin!</h1>
+    <div class="game-container" id="gameGrid"></div>
+    <div class="score" id="score">Attempts: 0</div>
+    <button class="btn" onclick="startGame()">Restart Game</button>
+  </div>
+
+  <script>
+    const gameGrid = document.getElementById('gameGrid');
+    const scoreDisplay = document.getElementById('score');
+    const cardNames = [
+      'JavaScript', 'Python', 'Java', 'C++', 'Ruby', 'C#', 'PHP', 'Swift', 'Go', 'Rust',
+      'Kotlin', 'TypeScript', 'Perl', 'R', 'Scala', 'HTML', 'CSS', 'SQL'
+    ];
+    let shuffledCards = [];
+    let flippedCards = [];
+    let matchedCards = 0;
+    let attempts = 0;
+
+    // Shuffle cards
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Create the grid dynamically
+    function createGrid() {
+      gameGrid.innerHTML = '';
+      shuffledCards.forEach((name, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.dataset.name = name;
+        card.dataset.index = index;
+        card.addEventListener('click', handleCardClick);
+        gameGrid.appendChild(card);
+      });
+    }
+
+    // Handle card click
+    function handleCardClick(event) {
+      const card = event.target;
+      const cardName = card.dataset.name;
+      const cardIndex = card.dataset.index;
+
+      if (card.classList.contains('flipped') || card.classList.contains('matched')) return;
+
+      card.textContent = cardName;
+      card.classList.add('flipped');
+      flippedCards.push({ name: cardName, index: cardIndex, element: card });
+
+      if (flippedCards.length === 2) {
+        checkForMatch();
+      }
+    }
+
+    // Check for a match
+    function checkForMatch() {
+      attempts++;
+      const [firstCard, secondCard] = flippedCards;
+      if (firstCard.name === secondCard.name && firstCard.index !== secondCard.index) {
+        firstCard.element.classList.add('matched');
+        secondCard.element.classList.add('matched');
+        matchedCards += 2;
+
+        if (matchedCards === shuffledCards.length) {
+          setTimeout(() => alert(`Congratulations! You found all pairs in ${attempts} attempts.`), 300);
+        }
+      } else {
+        setTimeout(() => {
+          firstCard.element.textContent = '';
+          firstCard.element.classList.remove('flipped');
+          secondCard.element.textContent = '';
+          secondCard.element.classList.remove('flipped');
+        }, 1000);
+      }
+
+      flippedCards = [];
+      scoreDisplay.textContent = `Attempts: ${attempts}`;
+    }
+
+    // Start the game
+    function startGame() {
+      attempts = 0;
+      matchedCards = 0;
+      flippedCards = [];
+      shuffledCards = shuffle([...cardNames, ...cardNames]);
+      scoreDisplay.textContent = 'Attempts: 0';
+      createGrid();
+    }
+
+    // Initialize the game on load
+    window.onload = startGame;
+  </script>
+</body>
+</html>
